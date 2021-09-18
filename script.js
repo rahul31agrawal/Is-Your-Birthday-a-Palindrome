@@ -6,8 +6,8 @@ function reverseStr(str) {
 }
 
 function isPalindrome(str) {
-    var reverse = reverseStr(str);
-    return str === reverse;
+    var reversedStr = reverseStr(str);
+    return str === reversedStr;
 }
 
 
@@ -32,14 +32,14 @@ function converDateToStr(date){
 }
 
 function getAllDateFormate(date){
-    var dateStr = converDateToStr(date);
+    // var dateStr = converDateToStr(date);
 
-    var ddmmyyyy = dateStr.day + dateStr.month + dateStr.year;
-    var mmddyyyy = dateStr.month + dateStr.day + dateStr.year;
-    var yyyymmdd = dateStr.year + dateStr.month + dateStr.day;
-    var ddmmyy = dateStr.day + dateStr.month + dateStr.year.slice(-2);
-    var mmddyy = dateStr.month + dateStr.day + dateStr.year.slice(-2);
-    var yymmdd = dateStr.year.slice(-2) + dateStr.month + dateStr.day;
+    var ddmmyyyy = date.day + date.month + date.year;
+    var mmddyyyy = date.month + date.day + date.year;
+    var yyyymmdd = date.year + date.month + date.day;
+    var ddmmyy = date.day + date.month + date.year.slice(-2);
+    var mmddyy = date.month + date.day + date.year.slice(-2);
+    var yymmdd = date.year.slice(-2) + date.month + date.day;
 
     return [ddmmyyyy,mmddyyyy,yyyymmdd,ddmmyy,mmddyy,yymmdd];
 
@@ -112,7 +112,7 @@ function getNextDate(date){
     }
 
     return {
-        day: date,
+        day: day,
         month: month,
         year: year
     };
