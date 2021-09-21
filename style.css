@@ -17,17 +17,19 @@ input {
     padding: 0 5px;
     border-radius: 5px;
     background-color: #FFF0D1;
+    
 }
 
 
 
 button {
+    
     height: 40px;
-    width: 100px;
+    width: 200px;
     border: none;
     border-radius: 5px;
-    padding: 1px;
     font-size: medium;    
     background-color: #FFF0D1;
     font-weight: bold;
+    display: block;
 }
